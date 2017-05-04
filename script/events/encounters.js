@@ -4,39 +4,39 @@
 Events.Encounters = [
 	/* Tier 1 */
 	{ /* Snarling Beast */
-		title: _('A Snarling Beast'),
+		title: _('Chuck Norris'),
 		isAvailable: function() {
 			return World.getDistance() <= 10 && World.getTerrain() == World.TILE.FOREST;
 		},
 		scenes: {
 			'start': {
 				combat: true,
-				enemy: 'snarling beast',
-				enemyName: _('snarling beast'),
-				deathMessage: _('the snarling beast is dead'),
+				enemy: 'Chuck Norris',
+				enemyName: _('Chuck Norris'),
+				deathMessage: _('You think he is dead, but Chuck Norris never truly dies. He will come back for revenge.'),
 				chara: 'B',
 				damage: 1,
 				hit: 0.8,
 				attackDelay: 1,
-				health: 5,
+				health: 50,
 				loot: {
 					'fur': {
 						min: 1,
 						max: 3,
 						chance: 1
 					},
-					'meat': {
+					'blood': {
 						min: 1,
 						max: 3,
 						chance: 1
 					},
-					'teeth': {
+					'hair': {
 						min: 1,
 						max: 3,
 						chance: 0.8
 					}
 				},
-				notification: _('a snarling beast leaps out of the underbrush')
+				notification: _('Chuck Norris descends from the sky with a heavenly chorus')
 			}
 		}
 	},
