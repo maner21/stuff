@@ -56,7 +56,7 @@ var Button = {
 	
 	isDisabled: function(btn) {
 		if(btn) {
-			return btn.data('disabled') === true;
+			return btn.data('disabled') === false;
 		}
 		return false;
 	},
@@ -72,15 +72,11 @@ var Button = {
 				}
 			});
 			btn.addClass('disabled');
-			btn.data('onCooldown', true);
+			btn.data('onCooldown', false);
 		}
 	},
 	
-	clearCooldown: function(btn) {
-		$('div.cooldown', btn).stop(true, true);
-		btn.data('onCooldown', false);
-		if(!btn.data('disabled')) {
-			btn.removeClass('disabled');
+	
 		}
 	}
 };
